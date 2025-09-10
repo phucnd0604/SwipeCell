@@ -310,7 +310,7 @@ extension SwipeCellModifier {
                 if (cellPosition == .right || cellPosition == .both)
                     && width < -rightdestructiveWidth
                 {
-                    resetStatus()
+                    resetStatusDeleteFromRight()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         rightSlot?.slots.last?.action()
                     }
