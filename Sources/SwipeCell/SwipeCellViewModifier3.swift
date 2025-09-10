@@ -368,7 +368,7 @@ extension SwipeCellModifier {
 
             if rightSlot?.slotStyle == .destructive {
                 if feedStatus == .feedOnce {
-                    resetStatus()
+                    resetStatusDeleteFromRight()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         rightSlot?.slots.last?.action()
                     }
