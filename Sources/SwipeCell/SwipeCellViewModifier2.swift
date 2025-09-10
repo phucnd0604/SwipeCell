@@ -168,6 +168,23 @@ extension SwipeCellModifier {
 
     }
 
+    func resetStatusDeleteFromRight() {
+        status = .showCell
+        withAnimation(.easeInOut) {
+            offset = -frameWidth
+            leftOffset = frameWidth
+            rightOffset = 0
+            spaceWidth = 0
+            showDalayButtonWith = 0
+        }
+        feedStatus = .none
+        cancellables.removeAll()
+        currentCellID = nil
+        // since we reset, we won't have to do it again
+        shouldResetStatusOnAppear = false
+
+    }
+
     func successFeedBack(_ type: Vibration) {
         #if os(iOS)
             type.vibrate()
