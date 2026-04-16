@@ -29,7 +29,7 @@ let package = Package(
         .target(
             name: "SwipeCell",
             dependencies: [
-                .product(name: "Introspect", package: "swiftui-introspect")
+                .product(name: "SwiftUIIntrospect", package: "swiftui-introspect")
             ]
         ),
         .testTarget(
